@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Form.css";
-// import Cards from "../Cards/Cards";
-// import Page from "../Page/Page";
 
 const Form = () => {
   const [email, setEmail] = useState("");
@@ -52,10 +50,10 @@ const Form = () => {
             onChange={(e) => setEmail(e.target.value)}
             className="email-input"
           />
-          {error && <p className="error">{error}</p>}
-          {message && <p className="message">{message}</p>}
           <button type="submit">Contact Me</button>
         </div>
+        {error && <p className="error">{error}</p>}
+        {message && <p className="message">{message}</p>}
       </form>
     </>
   );

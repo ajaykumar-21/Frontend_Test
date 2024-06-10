@@ -7,95 +7,61 @@ import Analytics from "../assets/Analytics.png";
 import Data from "../assets/Data.png";
 import Audio from "../assets/Audio.png";
 
+const services = [
+  {
+    image: Research,
+    title: "Presentation Design",
+    summary:
+      "Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Loremipsum dolor sit amet",
+  },
+  {
+    image: Audio,
+    title: "Audio - Visual Production",
+    summary:
+      "Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Loremipsum dolor sit amet",
+  },
+  {
+    image: Services,
+    title: "Translation Services",
+    summary:
+      "Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Loremipsum dolor sit amet",
+  },
+  {
+    image: Graphic,
+    title: "Graphic Design",
+    summary:
+      "Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Loremipsum dolor sit amet",
+  },
+  {
+    image: Analytics,
+    title: "Research & Analytics",
+    summary:
+      "Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Loremipsum dolor sit amet",
+  },
+  {
+    image: Data,
+    title: "Data Processing",
+    summary:
+      "Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Loremipsum dolor sit amet",
+  },
+];
+
 function Cards() {
   return (
-    <div>
-      <div className="box-container">
-        <div>
+    <div className="box-container">
+      {services.map((service, index) => (
+        <div key={service.title}>
           <div className="design-box">
-            <div className="sub-container">
+            <div className="card-wrapper">
               <div className="box-img">
-                <img src={Research} alt="research_Image" />
+                <img src={service.image} alt="research_Image" />
               </div>
-              <div className="box-heading">Presentation Design</div>
+              <div className="box-heading">{service.title}</div>
             </div>
-            <div className="box-summary">
-              Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Lorem
-              ipsum dolor sit amet
-            </div>
+            <div className="box-summary">{service.summary}</div>
           </div>
         </div>
-        <div>
-          <div className="design-box">
-            <div className="sub-container">
-              <div className="box-img">
-                <img src={Audio} alt="Audio_Image" />
-              </div>
-              <div className="box-heading">Audio - Visual Production</div>
-            </div>
-            <div className="box-summary">
-              Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Lorem
-              ipsum dolor sit amet
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="design-box">
-            <div className="sub-container">
-              <div className="box-img">
-                <img src={Services} alt="Service_Image" />
-              </div>
-              <div className="box-heading">Translation Services</div>
-            </div>
-            <div className="box-summary">
-              Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Lorem
-              ipsum dolor sit amet
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="design-box">
-            <div className="sub-container">
-              <div className="box-img">
-                <img src={Graphic} alt="Graphic_Image" />
-              </div>
-              <div className="box-heading">Graphic Design</div>
-            </div>
-            <div className="box-summary">
-              Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Lorem
-              ipsum dolor sit amet
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="design-box">
-            <div className="sub-container">
-              <div className="box-img">
-                <img src={Analytics} alt="Research_Image" />
-              </div>
-              <div className="box-heading">Research & Analytics</div>
-            </div>
-            <div className="box-summary">
-              Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Lorem
-              ipsum dolor sit amet
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="design-box">
-            <div className="sub-container">
-              <div className="box-img">
-                <img src={Data} alt="Data_Image" />
-              </div>
-              <div className="box-heading">Data Processing</div>
-            </div>
-            <div className="box-summary">
-              Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Lorem
-              ipsum dolor sit amet
-            </div>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
