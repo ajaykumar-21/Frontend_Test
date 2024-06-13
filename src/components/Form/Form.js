@@ -24,7 +24,7 @@ const Form = () => {
     }
 
     try {
-      const response = await axios.post("https://34.225.132.160:8002/api", {
+      const response = await axios.post("http://34.225.132.160:8002/api", {
         email,
       });
       if (response.status === 200) {
